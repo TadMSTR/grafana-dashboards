@@ -212,6 +212,12 @@
 - If you have fewer disks, panels will show "No data" for non-existent disks (this is normal)
 - Temperature thresholds: Edit panels to set your preferred limits
 
+**Array growth calculations:**
+- Growth rate calculations require at least 7-14 days of data to be accurate
+- "Days Until Full" prediction will show unrealistic values (e.g., thousands of years) initially
+- After 2-4 weeks of data collection, growth predictions become meaningful
+- If your array usage is stable, growth may show as negative (data cleanup/deletion)
+
 **UPS Monitoring:**
 - Requires `apcupsd` running on Unraid
 - If you don't have UPS, those panels will show "No data" (safe to ignore or delete)

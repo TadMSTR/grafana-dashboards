@@ -21,6 +21,8 @@ This repository contains production-ready Grafana dashboards specifically design
 ### Unraid Array Monitoring
 **Metrics:** Storage, disk health, temperatures, UPS, power, growth predictions
 
+![Unraid Dashboard Preview](./unraid-array-monitoring/screenshots/unraid-array-6hr.png)
+
 **Features:**
 - 15 comprehensive panels
 - Array usage and growth tracking
