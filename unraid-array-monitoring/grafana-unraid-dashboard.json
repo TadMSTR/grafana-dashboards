@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
+  "id": 0,
   "links": [],
   "panels": [
     {
@@ -800,7 +800,7 @@
       "pluginVersion": "12.3.3",
       "targets": [
         {
-          "query": "from(bucket: \"unraid\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"apcupsd\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"battery_charge_percent\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+          "query": "from(bucket: \"unraid\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"apcupsd\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"battery_charge_percent\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> keep(columns: [\"_time\", \"_value\"])",
           "refId": "A"
         }
       ],
@@ -870,7 +870,7 @@
       "pluginVersion": "12.3.3",
       "targets": [
         {
-          "query": "from(bucket: \"unraid\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"apcupsd\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"load_percent\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> yield(name: \"mean\")",
+          "query": "from(bucket: \"unraid\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"apcupsd\")\r\n  |> filter(fn: (r) => r[\"_field\"] == \"load_percent\")\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> keep(columns: [\"_time\", \"_value\"])\r\n  |> yield(name: \"mean\")",
           "refId": "A"
         }
       ],
@@ -1180,5 +1180,5 @@
   "timezone": "browser",
   "title": "Unraid",
   "uid": "adk2zp4",
-  "version": 66
+  "version": 67
 }
