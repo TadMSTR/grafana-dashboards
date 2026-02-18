@@ -2,6 +2,8 @@
 
 **Comprehensive system monitoring for Unraid servers — CPU, memory, network, disk, temperatures, Docker, UPS, and log analysis.**
 
+![Unraid System Dashboard V3](Unraid-System-Dashboard-V3-Homelab-Monitoring-Dashboards-Grafana.png)
+
 ---
 
 ## Requirements
